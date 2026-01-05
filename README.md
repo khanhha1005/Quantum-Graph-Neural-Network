@@ -104,16 +104,6 @@ pip install torch torch-geometric
 pip install pennylane pennylane-lightning
 pip install scikit-learn tensorboard tqdm
 ```
-
-### Dependencies
-
-- **PyTorch**: Deep learning framework
-- **PyTorch Geometric**: Graph neural network operations
-- **PennyLane**: Quantum circuit simulation and optimization
-- **PennyLane Lightning**: High-performance quantum simulators (CPU/GPU)
-- **TensorBoard**: Training visualization
-- **scikit-learn**: Evaluation metrics
-
 ## Usage
 
 ### Training Quantum Models
@@ -194,30 +184,6 @@ To compare multiple models:
 2. Launch TensorBoard with the parent directory: `tensorboard --logdir=training_results`
 3. Use TensorBoard's interface to compare metrics across different models
 
-## Project Structure
-
-```
-Quantum_GNN_v2/
-├── src/
-│   ├── models/
-│   │   ├── Quantum_GCN.py              # Main QGCN model
-│   │   ├── QCN_Layers/
-│   │   │   └── QGCNConv.py             # Quantum graph convolution layer
-│   │   ├── Quantum_Classifiers/
-│   │   │   ├── MPS.py                  # Matrix Product State classifier
-│   │   │   └── TTN.py                  # Tree Tensor Network classifier
-│   │   └── QNN_Node_Embedding.py       # Quantum node embedding circuit
-│   └── dataloader/
-│       ├── load_vulnerability_data.py  # Data loading utilities
-│       └── config.json                  # Data configuration
-├── train_data/
-│   ├── reentrancy/
-│   ├── integeroverflow/
-│   └── timestamp/
-├── train_quantum_models.py             # Main training script
-└── training_results/                    # Saved models and logs
-```
-
 ## Output Files
 
 After training, each model generates:
@@ -228,11 +194,6 @@ After training, each model generates:
 - **`config.json`**: Training configuration
 - **`logs/`**: TensorBoard event files
 
-## Quantum Device Configuration
-
-The models automatically select the optimal quantum device:
-
-1. **GPU (if available)**: `lightning.gpu` for faster simulation
 2. **CPU (fallback)**: `lightning.qubit` for CPU-based simulation
 
 The device selection is handled automatically in the quantum classifier implementations.
