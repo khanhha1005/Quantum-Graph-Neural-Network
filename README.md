@@ -177,13 +177,6 @@ TensorBoard displays:
 - **Best Validation F1**: Best F1 score achieved
 - **Model Information**: Number of parameters, input dimensions
 
-### 5. Comparing Models
-
-To compare multiple models:
-1. Train all models (they will be saved in `training_results/`)
-2. Launch TensorBoard with the parent directory: `tensorboard --logdir=training_results`
-3. Use TensorBoard's interface to compare metrics across different models
-
 ## Output Files
 
 After training, each model generates:
@@ -193,7 +186,3 @@ After training, each model generates:
 - **`history.json`**: Training history (loss, accuracy, precision, recall, F1)
 - **`config.json`**: Training configuration
 - **`logs/`**: TensorBoard event files
-
-2. **CPU (fallback)**: `lightning.qubit` for CPU-based simulation
-
-The device selection is handled automatically in the quantum classifier implementations.
