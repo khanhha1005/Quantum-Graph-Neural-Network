@@ -1,0 +1,12 @@
+{
+  "batch_size": 16,
+  "learning_rate": 0.001,
+  "max_epochs": 100,
+  "patience": 15,
+  "min_delta": 0.0,
+  "q_depths": [
+    1
+  ],
+  "validate_every": 3,
+  "max_nodes_per_batch": 5000
+}
