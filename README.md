@@ -1,4 +1,4 @@
-# Quantum-aided Graph Neural Networks for Enhancing Smart Contract Vulnerability Detection
+# Quantum-inspired Graph Neural Networks for Lightweight Smart Contract Vulnerability Detection
 
 This repository implements quantum-enhanced Graph Neural Networks (QGNNs) for detecting vulnerabilities in smart contracts. The approach leverages quantum computing principles to enhance graph neural network architectures for improved vulnerability detection performance.
 
